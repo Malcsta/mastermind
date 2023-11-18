@@ -5,6 +5,8 @@ interface_active = True
 code_length = 4
 random_colours = ''
 match = None
+matches = 0
+match_list = []
 
 
 for i in range(code_length):
@@ -30,7 +32,9 @@ while interface_active:
         for j in code_list:
             if i == j:
                 match = code_list.index(i)
-    
+                match_list.append(match)
+                matches += 1
+    print(f'match found at position {match_list}')
 
 
 
